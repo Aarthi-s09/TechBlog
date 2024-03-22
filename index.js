@@ -3,10 +3,11 @@ const express = require('express');
 const { User } = require('./schema.js'); // Importing User model from schema.js
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const cors=require('cors')
 
 const app = express()
 app.use(bodyParser.json())
-
+app.use(cors())
 
 
 async function connectToDb() {
